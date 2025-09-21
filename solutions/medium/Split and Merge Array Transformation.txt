@@ -1,0 +1,5 @@
+// Title: Split and Merge Array Transformation
+            // Difficulty: Medium
+            // Language: undefined
+            // Link: https://leetcode.com/problems/split-and-merge-array-transformation/
+
