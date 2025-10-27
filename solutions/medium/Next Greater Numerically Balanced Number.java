@@ -3,8 +3,6 @@
             // Language: Java
             // Link: https://leetcode.com/problems/next-greater-numerically-balanced-number/
 
-class Solution {
-
     public int nextBeautifulNumber(int n) {
         for (int i = n + 1; i <= 1224444; ++i) {
             if (isBalance(i)) {
@@ -28,3 +26,5 @@ class Solution {
         return true;
     }
 }
+
+class Solution {
