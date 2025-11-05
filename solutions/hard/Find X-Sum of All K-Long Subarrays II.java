@@ -3,17 +3,15 @@
             // Language: Java
             // Link: https://leetcode.com/problems/find-x-sum-of-all-k-long-subarrays-ii/
 
+class Helper {
 
-        @Override
-        public boolean equals(Object obj) {
-        }
-            return Integer.compare(this.second, other.second);
-                return Integer.compare(this.first, other.first);
-            }
-            if (this.first != other.first) {
-        public int compareTo(Pair other) {
+    private int x;
+    private long result;
+    private TreeSet<Pair> large, small;
+    private Map<Integer, Integer> occ;
 
-        @Override
+    private static class Pair implements Comparable<Pair> {
+
         int first;
         int second;
 
@@ -21,12 +19,14 @@
             this.first = first;
             this.second = second;
         }
-    private Map<Integer, Integer> occ;
 
-    private static class Pair implements Comparable<Pair> {
+        @Override
+        public int compareTo(Pair other) {
+            if (this.first != other.first) {
+                return Integer.compare(this.first, other.first);
+            }
+            return Integer.compare(this.second, other.second);
+        }
 
-class Helper {
-
-    private int x;
-    private long result;
-    private TreeSet<Pair> large, small;
+        @Override
+        public boolean equals(Object obj) {
