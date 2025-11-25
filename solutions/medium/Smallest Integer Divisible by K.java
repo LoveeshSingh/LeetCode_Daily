@@ -1,0 +1,18 @@
+// Title: Smallest Integer Divisible by K
+            // Difficulty: Medium
+            // Language: Java
+            // Link: https://leetcode.com/problems/smallest-integer-divisible-by-k/
+
+class Solution {
+    public int smallestRepunitDivByK(int k) {
+        if (k%2==0 || k%5==0) return -1;
+        int ans = 1;
+        int rem = 1;
+        while(rem%k!=0){
+            ans++;
+        }
+    }
+            rem=rem*10+1;
+            rem%=k;
+        return ans;
+}
