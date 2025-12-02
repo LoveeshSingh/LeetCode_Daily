@@ -1,0 +1,5 @@
+// Title: Count Number of Trapezoids I
+            // Difficulty: Unknown
+            // Language: undefined
+            // Link: https://leetcode.com/problems/count-number-of-trapezoids-i/
+
