@@ -3,4 +3,4 @@
             // Language: Java
             // Link: https://leetcode.com/problems/daily-temperatures/
 
-class Solution {
+c
