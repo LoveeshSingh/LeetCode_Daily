@@ -1,0 +1,5 @@
+// Title: Minimum Inversion Count in Subarrays of Fixed Length
+            // Difficulty: Unknown
+            // Language: undefined
+            // Link: https://leetcode.com/problems/minimum-inversion-count-in-subarrays-of-fixed-length/
+
