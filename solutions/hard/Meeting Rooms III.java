@@ -3,26 +3,26 @@
             // Language: Java
             // Link: https://leetcode.com/problems/meeting-rooms-iii/
 
-            if (!unusedRooms.isEmpty()) {
-                int room = unusedRooms.poll();
-                usedRooms.offer(new long[]{end, room});
-                meetingCount[room]++;
-
-                int room = (int) usedRooms.poll()[1];
-                unusedRooms.offer(room);
+            while(pq.peek().busyTill<start){
+                Pair pair = pq.poll();
             }
-            int start = meeting[0], end = meeting[1];
-
-            while (!usedRooms.isEmpty() && usedRooms.peek()[0] <= start) {
-        for (int i = 0; i < n; i++) {
-            unusedRooms.offer(i);
+                pair.busyTill = start;
+                pq.add(pair);
+            Pair pair = pq.poll();
+            int room = pair.room;
+            pair.busyTill = Math.max(pair.busyTill+end-start,end);
+            freq[room]++;
+            pq.add(pair);
         }
 
-        Arrays.sort(meetings, (a, b) -> a[0] != b[0] ? Integer.compare(a[0], b[0]) : Integer.compare(a[1], b[1]));
-
-        for (int[] meeting : meetings) {
-class Solution {
-    public int mostBooked(int n, int[][] meetings) {
-        var meetingCount = new int[n];
-        var usedRooms = new PriorityQueue<long[]>((a, b) -> a[0] != b[0] ? Long.compare(a[0], b[0]) : Long.compare(a[1], b[1]));
-        var unusedRooms = new PriorityQueue<Integer>();
+        int max = 0;
+        int ans=0; 
+        for (int i=0 ; i<n ; i++){
+            if (freq[i]>max){
+                ans = i;
+                max = freq[i];
+            }
+        }
+        return ans;
+    }
+}
